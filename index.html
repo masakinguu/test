@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- スマホで正しい幅で表示するための設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自己紹介</title>
+  <style>
+    /* 色はここでまとめて変えられます */
+    :root {
+      --bg: #f4f6fb;
+      --card: #ffffff;
+      --text: #333333;
+      --sub: #777777;
+      --accent: #4a7bd0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 16px;
+      /* チェック柄の背景(縦と横の半透明の線を重ねています) */
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(90deg, rgba(74, 123, 208, 0.12) 50%, transparent 50%),
+        linear-gradient(rgba(74, 123, 208, 0.12) 50%, transparent 50%);
+      background-size: 40px 40px;
+      color: var(--text);
+      font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 32px 0 16px;
+    }
+
+    /* アイコン(丸い画像の代わり) */
+    .avatar {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: var(--accent);
+      border-left: 4px solid var(--accent);
+      padding-left: 8px;
+    }
+
+    .card p,
+    .card ul {
+      margin: 0;
+    }
+
+    .card ul {
+      padding-left: 1.2em;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--sub);
+      font-size: 0.8rem;
+      padding: 16px 0;
+    }
+
+    /* 画面が広いとき(パソコン)は少し大きめに */
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="avatar">😊</div>
+      <h1>山田 太郎</h1>
+    </header>
+
+    <section class="card">
+      <h2>名前</h2>
+      <p>山田 太郎(ヤマダ タロウ)</p>
+    </section>
+
+    <section class="card">
+      <h2>趣味</h2>
+      <ul>
+        <li>読書</li>
+        <li>ゲーム</li>
+        <li>プログラミング</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>ひとこと</h2>
+      <p>はじめまして!ホームページ作りを練習中です。よろしくお願いします。</p>
+    </section>
+
+    <footer>
+      &copy; 2026 山田 太郎
+    </footer>
+
+  </div>
+</body>
+</html>
